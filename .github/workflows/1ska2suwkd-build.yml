@@ -1,7 +1,7 @@
-name: Build Aseprite
+name: Build Aseprite (Custom)
 
 on:
-  workflow_dispatch: # 수동으로 빌드를 실행할 수 있게 해주는 트리거
+  workflow_dispatch:
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive' # Aseprite 구동에 필요한 하위 모듈까지 모두 가져옵니다.
+          submodules: 'recursive'
 
       - name: Install Ninja
         uses: seanmiddleditch/gha-setup-ninja@master
