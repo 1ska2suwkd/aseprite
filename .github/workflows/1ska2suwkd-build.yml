@@ -20,9 +20,8 @@ jobs:
         uses: ilammy/msvc-dev-cmd@v1
 
       - name: Download Skia
-        # Aseprite 전용으로 커스텀된 Skia 라이브러리를 다운로드합니다.
         run: |
-          Invoke-WebRequest -Uri https://github.com/aseprite/skia/releases/download/m119-0a615744b8/Skia-Windows-Release-x64.zip -OutFile skia.zip
+          Invoke-WebRequest -Uri https://github.com/aseprite/skia/releases/download/m124-08a5439a6b/Skia-Windows-Release-x64.zip -OutFile skia.zip
           Expand-Archive skia.zip -DestinationPath skia
 
       - name: Configure CMake
